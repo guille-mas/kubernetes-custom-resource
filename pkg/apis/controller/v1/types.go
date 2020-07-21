@@ -34,8 +34,8 @@ type YDataStatus struct {
 
 // YDataList is a list of YData resources
 type YDataList struct {
-	metav1.TypeMeta   `json:",inline"`
-	metav1.ObjectMeta `json:"metadata"`
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata"`
 
 	Items []YData `json:"items"`
 }
