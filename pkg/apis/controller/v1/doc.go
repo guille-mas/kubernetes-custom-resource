@@ -1,6 +1,6 @@
 // Global tags:
 
 // +k8s:deepcopy-gen=package
-// +groupName=controller.guille.cloud
+// +groupName=github.com/guille-mas/kubernetes-custom-resource
 
-package v1 // import "guille.cloud/crd/pkg/apis/controller/v1"
+package v1 // import "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"

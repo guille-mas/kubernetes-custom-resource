@@ -34,11 +34,11 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/klog/v2"
 
-	crdv1 "guille.cloud/crd/pkg/apis/controller/v1"
-	clientset "guille.cloud/crd/pkg/generated/clientset/versioned"
-	scheme "guille.cloud/crd/pkg/generated/clientset/versioned/scheme"
-	informers "guille.cloud/crd/pkg/generated/informers/externalversions/controller/v1"
-	listers "guille.cloud/crd/pkg/generated/listers/controller/v1"
+	crdv1 "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"
+	clientset "github.com/guille-mas/kubernetes-custom-resource/pkg/generated/clientset/versioned"
+	scheme "github.com/guille-mas/kubernetes-custom-resource/pkg/generated/clientset/versioned/scheme"
+	informers "github.com/guille-mas/kubernetes-custom-resource/pkg/generated/informers/externalversions/controller/v1"
+	listers "github.com/guille-mas/kubernetes-custom-resource/pkg/generated/listers/controller/v1"
 )
 
 const controllerAgentName = "controller"

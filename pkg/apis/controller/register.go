@@ -2,5 +2,5 @@ package controller
 
 // GroupName is the group name used in this package
 const (
-	GroupName = "controller.guille.cloud"
+	GroupName = "github.com/guille-mas/kubernetes-custom-resource"
 )

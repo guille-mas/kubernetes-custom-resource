@@ -30,9 +30,9 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
 
-	controller "guille.cloud/crd/pkg/apis/controller/v1"
-	"guille.cloud/crd/pkg/generated/clientset/versioned/fake"
-	informers "guille.cloud/crd/pkg/generated/informers/externalversions"
+	controller "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"
+	"github.com/guille-mas/kubernetes-custom-resource/pkg/generated/clientset/versioned/fake"
+	informers "github.com/guille-mas/kubernetes-custom-resource/pkg/generated/informers/externalversions"
 )
 
 var (
