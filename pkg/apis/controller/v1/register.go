@@ -18,7 +18,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	controller "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller"
+	controller "guille.cloud/kubernetes-custom-resource/pkg/apis/controller"
 )
 
 // SchemeGroupVersion is group version used to register these objects

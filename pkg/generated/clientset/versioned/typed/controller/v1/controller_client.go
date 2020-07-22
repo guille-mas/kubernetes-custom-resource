@@ -19,8 +19,8 @@ limitations under the License.
 package v1
 
 import (
-	v1 "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"
-	"github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned/scheme"
+	v1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
+	"guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -29,7 +29,7 @@ type GithubV1Interface interface {
 	YDatasGetter
 }
 
-// GithubV1Client is used to interact with features provided by the github.com/guille-mas/kubernetes-custom-resource group.
+// GithubV1Client is used to interact with features provided by the guille.cloud/kubernetes-custom-resource group.
 type GithubV1Client struct {
 	restClient rest.Interface
 }

@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned"
-	githubv1 "github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned/typed/controller/v1"
-	fakegithubv1 "github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned/typed/controller/v1/fake"
+	clientset "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned"
+	githubv1 "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/typed/controller/v1"
+	fakegithubv1 "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/typed/controller/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

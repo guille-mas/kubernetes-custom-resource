@@ -21,7 +21,7 @@ package versioned
 import (
 	"fmt"
 
-	githubv1 "github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned/typed/controller/v1"
+	githubv1 "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/typed/controller/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

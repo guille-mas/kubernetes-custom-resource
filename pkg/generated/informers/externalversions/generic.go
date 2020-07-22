@@ -21,7 +21,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"
+	v1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )
@@ -52,7 +52,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=github.com/guille-mas/kubernetes-custom-resource, Version=v1
+	// Group=guille.cloud/kubernetes-custom-resource, Version=v1
 	case v1.SchemeGroupVersion.WithResource("ydatas"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Github().V1().YDatas().Informer()}, nil
 

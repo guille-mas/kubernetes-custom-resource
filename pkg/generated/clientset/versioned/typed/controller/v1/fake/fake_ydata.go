@@ -21,7 +21,7 @@ package fake
 import (
 	"context"
 
-	controllerv1 "github.com/guille-mas/kubernetes-custom-resource/pkg/apis/controller/v1"
+	controllerv1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -36,9 +36,9 @@ type FakeYDatas struct {
 	ns   string
 }
 
-var ydatasResource = schema.GroupVersionResource{Group: "github.com/guille-mas/kubernetes-custom-resource", Version: "v1", Resource: "ydatas"}
+var ydatasResource = schema.GroupVersionResource{Group: "guille.cloud/kubernetes-custom-resource", Version: "v1", Resource: "ydatas"}
 
-var ydatasKind = schema.GroupVersionKind{Group: "github.com/guille-mas/kubernetes-custom-resource", Version: "v1", Kind: "YData"}
+var ydatasKind = schema.GroupVersionKind{Group: "guille.cloud/kubernetes-custom-resource", Version: "v1", Kind: "YData"}
 
 // Get takes name of the yData, and returns the corresponding yData object, and an error if there is any.
 func (c *FakeYDatas) Get(ctx context.Context, name string, options v1.GetOptions) (result *controllerv1.YData, err error) {

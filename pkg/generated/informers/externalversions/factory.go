@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/guille-mas/kubernetes-custom-resource/pkg/clientset/versioned"
-	controller "github.com/guille-mas/kubernetes-custom-resource/pkg/informers/externalversions/controller"
-	internalinterfaces "github.com/guille-mas/kubernetes-custom-resource/pkg/informers/externalversions/internalinterfaces"
+	versioned "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned"
+	controller "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/controller"
+	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
