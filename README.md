@@ -18,6 +18,6 @@ hack/update-codegen.sh
 
 ```bash
 vendor/k8s.io/code-generator/generate-groups.sh all \
-github.com/guille-mas/kubernetes-custom-resource/kubernetes-custom-resource/pkg/client \ github.com/guille-mas/kubernetes-custom-resource/kubernetes-custom-resource/pkg/apis \
-github.com/guille-mas/kubernetes-custom-resource:v1
+guille.cloud/kubernetes-custom-resource/kubernetes-custom-resource/pkg/client \ guille.cloud/kubernetes-custom-resource/kubernetes-custom-resource/pkg/apis \
+guille.cloud/kubernetes-custom-resource:v1
 ```
