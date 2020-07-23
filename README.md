@@ -1,23 +1,25 @@
-# Kubernetes CRD + operator
+# YData custom k8s resource
 
-Welcome! In this repo I'm hosting a very simple sample of a K8s Custom Resource Definition's operator written in Golang.
+## Install
 
-## Prepare your development environment
+`go get github.com/guille-mas/kubernetes-custom-resource`
 
-1. Clone https://github.com/kubernetes/code-generator.git
-2. Step into code-generator/ root folder
-3. Set GOPATH environment variable to the root of your Custom resource definition
-4. run hack/update-codegen.sh
+## Build
 
-```bash
-git clone https://github.com/kubernetes/code-generator.git
-cd code-generator
-export GOPATH=/opt/dev/kubernetes-custom-resource
-hack/update-codegen.sh
-```
+`go build -o ydata .`
+
+## Howto run it
 
 ```bash
-vendor/k8s.io/code-generator/generate-groups.sh all \
-guille.cloud/kubernetes-custom-resource/kubernetes-custom-resource/pkg/client \ guille.cloud/kubernetes-custom-resource/kubernetes-custom-resource/pkg/apis \
-guille.cloud/kubernetes-custom-resource:v1
+./ydata -kubeconfig=$HOME/.kube/config
+kubectl create -f yaml/crd.yml
+kubectl create -f yaml/my-ydata.yml
+kubectl get ydatas
 ```
+
+## Backlog
+
+Fix vanity import path guille.cloud/kubernetes-custom-resource. \
+I think the root of the problem is that the meta tag is injected into the DOM at runtime at https://guille.cloud/kubernetes-custom-resource, so go can't see it when it checks that uri.
+
+I've put whatever come to my mind as YData spec and status attributes. More meaningful attributes would be fine to have.
