@@ -19,7 +19,7 @@ limitations under the License.
 package v1
 
 import (
-	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/internalinterfaces"
+	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

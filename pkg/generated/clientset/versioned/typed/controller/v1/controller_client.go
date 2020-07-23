@@ -20,7 +20,7 @@ package v1
 
 import (
 	v1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
-	"guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/scheme"
+	"guille.cloud/kubernetes-custom-resource/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
@@ -29,7 +29,7 @@ type GithubV1Interface interface {
 	YDatasGetter
 }
 
-// GithubV1Client is used to interact with features provided by the guille.cloud/kubernetes-custom-resource group.
+// GithubV1Client is used to interact with features provided by the controller.guille.cloud group.
 type GithubV1Client struct {
 	restClient rest.Interface
 }

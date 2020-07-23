@@ -23,7 +23,7 @@ import (
 	"time"
 
 	v1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
-	scheme "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/scheme"
+	scheme "guille.cloud/kubernetes-custom-resource/pkg/generated/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -72,7 +72,7 @@ func (c *yDatas) Get(ctx context.Context, name string, options metav1.GetOptions
 		Resource("ydatas").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -89,7 +89,7 @@ func (c *yDatas) List(ctx context.Context, opts metav1.ListOptions) (result *v1.
 		Resource("ydatas").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -106,7 +106,7 @@ func (c *yDatas) Watch(ctx context.Context, opts metav1.ListOptions) (watch.Inte
 		Resource("ydatas").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch(ctx)
+		Watch()
 }
 
 // Create takes the representation of a yData and creates it.  Returns the server's representation of the yData, and an error, if there is any.
@@ -117,7 +117,7 @@ func (c *yDatas) Create(ctx context.Context, yData *v1.YData, opts metav1.Create
 		Resource("ydatas").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(yData).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -131,7 +131,7 @@ func (c *yDatas) Update(ctx context.Context, yData *v1.YData, opts metav1.Update
 		Name(yData.Name).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(yData).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -147,7 +147,7 @@ func (c *yDatas) UpdateStatus(ctx context.Context, yData *v1.YData, opts metav1.
 		SubResource("status").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(yData).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -159,7 +159,7 @@ func (c *yDatas) Delete(ctx context.Context, name string, opts metav1.DeleteOpti
 		Resource("ydatas").
 		Name(name).
 		Body(&opts).
-		Do(ctx).
+		Do().
 		Error()
 }
 
@@ -175,7 +175,7 @@ func (c *yDatas) DeleteCollection(ctx context.Context, opts metav1.DeleteOptions
 		VersionedParams(&listOpts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(&opts).
-		Do(ctx).
+		Do().
 		Error()
 }
 
@@ -189,7 +189,7 @@ func (c *yDatas) Patch(ctx context.Context, name string, pt types.PatchType, dat
 		SubResource(subresources...).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(data).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }

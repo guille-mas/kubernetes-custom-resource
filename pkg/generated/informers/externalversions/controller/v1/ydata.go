@@ -23,9 +23,9 @@ import (
 	time "time"
 
 	controllerv1 "guille.cloud/kubernetes-custom-resource/pkg/apis/controller/v1"
-	versioned "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned"
-	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/internalinterfaces"
-	v1 "guille.cloud/kubernetes-custom-resource/pkg/client/listers/controller/v1"
+	versioned "guille.cloud/kubernetes-custom-resource/pkg/generated/clientset/versioned"
+	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/generated/informers/externalversions/internalinterfaces"
+	v1 "guille.cloud/kubernetes-custom-resource/pkg/generated/listers/controller/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

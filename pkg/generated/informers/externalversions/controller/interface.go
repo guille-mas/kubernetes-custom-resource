@@ -19,8 +19,8 @@ limitations under the License.
 package controller
 
 import (
-	v1 "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/controller/v1"
-	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/client/informers/externalversions/internalinterfaces"
+	v1 "guille.cloud/kubernetes-custom-resource/pkg/generated/informers/externalversions/controller/v1"
+	internalinterfaces "guille.cloud/kubernetes-custom-resource/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1 "guille.cloud/kubernetes-custom-resource/pkg/client/clientset/versioned/typed/controller/v1"
+	v1 "guille.cloud/kubernetes-custom-resource/pkg/generated/clientset/versioned/typed/controller/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

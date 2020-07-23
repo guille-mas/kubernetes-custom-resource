@@ -36,9 +36,9 @@ type FakeYDatas struct {
 	ns   string
 }
 
-var ydatasResource = schema.GroupVersionResource{Group: "guille.cloud/kubernetes-custom-resource", Version: "v1", Resource: "ydatas"}
+var ydatasResource = schema.GroupVersionResource{Group: "controller.guille.cloud", Version: "v1", Resource: "ydatas"}
 
-var ydatasKind = schema.GroupVersionKind{Group: "guille.cloud/kubernetes-custom-resource", Version: "v1", Kind: "YData"}
+var ydatasKind = schema.GroupVersionKind{Group: "controller.guille.cloud", Version: "v1", Kind: "YData"}
 
 // Get takes name of the yData, and returns the corresponding yData object, and an error if there is any.
 func (c *FakeYDatas) Get(ctx context.Context, name string, options v1.GetOptions) (result *controllerv1.YData, err error) {

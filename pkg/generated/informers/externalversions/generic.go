@@ -52,7 +52,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 // TODO extend this to unknown resources with a client pool
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
-	// Group=guille.cloud/kubernetes-custom-resource, Version=v1
+	// Group=controller.guille.cloud, Version=v1
 	case v1.SchemeGroupVersion.WithResource("ydatas"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Github().V1().YDatas().Informer()}, nil
 
