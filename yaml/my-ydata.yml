@@ -1,0 +1,9 @@
+apiVersion: "controller.guille.cloud/v1"
+kind: YData
+metadata:
+  name: my-ydata
+spec:
+  mlModel: model-1
+  pipeline: pipeline-1
+  experiment: a-nice-experiment
+  run: true
