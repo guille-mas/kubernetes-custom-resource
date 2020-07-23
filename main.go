@@ -15,7 +15,6 @@ var (
 )
 
 func main() {
-	klog.InitFlags(nil)
 	flag.Parse()
 
 	cfg, err := clientcmd.BuildConfigFromFlags(*master, *kuberconfig)
